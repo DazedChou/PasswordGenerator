@@ -29,24 +29,26 @@ pwdGen.addEventListener("click",function(){
     //Creating password and store into array
     //create empty password
     var tempPassword =[];
-    var passwordchoice=[];
+    var passwordChoice=[];
     //To make sure that atleast 1 char of desired choice is in password
     if(lower){
         tempPassword.push(lowerArray[Math.floor(Math.random()*26)]);
-        passwordchoice.push(lowerArray);
+        passwordChoice.push(lowerArray);
     }
     if(upper){
         tempPassword.push(upperArray[Math.floor(Math.random()*26)]);
-        passwordchoice.push(upperArray);
+        passwordChoice.push(upperArray);
     }
     if(numeral){
         tempPassword.push(numArray[Math.floor(Math.random()*10)]);
-        passwordchoice.push(numArray);
+        passwordChoice.push(numArray);
     }
     if(special){
         tempPassword.push(specArray[Math.floor(Math.random()*8)]);
-        passwordchoice.push(specArray);
+        passwordChoice.push(specArray);
     }
+    //convert 2D array into 1D array
+    passwordChoice = passwordChoice.flat();
 
     //change length of iteration based on selected choices
     if(lower && upper && numeral && special){
@@ -59,10 +61,11 @@ pwdGen.addEventListener("click",function(){
         num = num - 1;
     }
 
-
+    //generating random characters for password and pushing it into tempPassword
     for(var i = 0 ; i < num ; i++){
-
+        tempPassword.push(passwordChoice[Math.floor(Math.random()*passwordChoice.length)])
     }
+
 
 
 })
