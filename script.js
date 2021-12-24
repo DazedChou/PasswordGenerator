@@ -66,6 +66,20 @@ pwdGen.addEventListener("click",function(){
         tempPassword.push(passwordChoice[Math.floor(Math.random()*passwordChoice.length)])
     }
 
+    //scramble array 
+    //since the first characters will always be a lowercase, uppercase, numeral and special char in that order.
+
+    for(var j = 0; j < 4 ; j++){
+        var k = tempPassword[j];
+        var l = Math.floor(Math.random()*tempPassword.length)
+        tempPassword[j] = tempPassword[l];
+        tempPassword[l] = k;
+    }
+
+    //Changing array to string
+    var password = tempPassword.toString();
+    //remove all occurrences of ',' within password string
+    password = password.replaceAll(",","");
 
 
 })
