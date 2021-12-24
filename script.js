@@ -5,9 +5,13 @@ pwdGen.addEventListener("click",function(){
     //Prompt for Password length criteria
     var num = prompt("Please enter your desired Password length","Enter a number between 1 and 128");
     //Condition check 
+    if(num === null){
+        return;
+    }
     while(num < 8 || num > 128 ){
         num = prompt("Please enter your desired Password length","Please enter a valid number between 1 and 128");
     }
+
 
     //Ask for Desired Character types
     // var items = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
@@ -48,6 +52,7 @@ pwdGen.addEventListener("click",function(){
         passwordChoice.push(specArray);
     }
     //convert 2D array into 1D array
+    //passwordchoice contains user selected characters
     passwordChoice = passwordChoice.flat();
 
     //change length of iteration based on selected choices
