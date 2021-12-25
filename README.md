@@ -1,37 +1,14 @@
 # PasswordGenerator
 
 One paragraph of project description goes here.
+This project's purpose is to allow users to generate a new and secure password that conforms to the user's accepted conditions which include lowercase, uppercase, numbers, and special characters. 
 
-## Getting Started
+## Development
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development environment running.
-
-Say what the step will be:
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
+I first set up the html file with the basic content that I was needed, which was essentially some text and a button and added some basic styling. 
+![](./Screenshot_1.jpg)
+Next, when the button would be clicked, I then generate a prompt for the user on the desired password length and would check conditions to make sure that the number is between 8 and 128. After this, I would let the user confirm if the wanted uppercase letters, lowercase letters, numerals, and special characters and to make sure that atleast there would be 1 character of the desired criteria within the generated password. I would then scramble the first 4 characters of the password since the first 4 characters would always be a lowercase, uppercase, number, and then a special character in that order. Then the password would be displayed on the page.
+![](./Screenshot_2.jpg)
 
 ## Built With
 
@@ -41,25 +18,19 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://dazedchou.github.io/PasswordGenerator/)
 
 
 ## Authors
 
-* **YOUR NAME** 
+* **David Chou** 
 
-- [Link to Portfolio Site](#)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/)
+- [Link to Portfolio Site](https://dazedchou.github.io/My-Portfolio/)
+- [Link to Github](https://github.com/dazedchou)
+- [Link to LinkedIn](https://www.linkedin.com/in/davidchou99)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License 
 
-## Acknowledgments
-
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
