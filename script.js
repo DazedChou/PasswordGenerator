@@ -5,6 +5,11 @@ var word = document.querySelector("#pwd");
 pwdGen.addEventListener("click",function(){
     //Prompt for Password length criteria
     var num = prompt("Please enter your desired Password length","Enter a number between 1 and 128");
+
+    if(num === null){
+        return;
+    }
+
     //Condition check 
     while(num < 8 || num > 128 || num.includes(".")){
         num = prompt("Please enter your desired Password length","Please enter a valid number between 1 and 128");
